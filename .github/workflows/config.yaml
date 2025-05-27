@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     # Use aws-nuke official DOcker image with root user
     container:
-      image: quay.io/rebuy/aws-nuke:v2.25.0
+      image: quay.io/rebuy/aws-nuke:v2.16.0
       options: --user root
     steps:
     # Checkout your repository and setup AWS credentials
