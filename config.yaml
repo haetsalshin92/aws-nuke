@@ -2,7 +2,7 @@
 regions:   # nuke 실행 리전 기입
 #- "global" # global 리소스 전용 
 - "ap-northeast-2"
-#- "us-east-1"
+- "us-west-2"
 
 account-blocklist: # nuke 블랙리스트 AWS ID
 - 1234567890
@@ -10,3 +10,36 @@ account-blocklist: # nuke 블랙리스트 AWS ID
 # nuke 진행할 AWS ID
 accounts:        
   536275850973:
+    filters:
+      EC2Ami:
+        - "*"
+      IAMUser:
+        - "*"
+      IAMRole:
+        - "*"
+      IAMPolicy:
+        - "*"
+      EC2Vpc:
+        - "*"
+      EC2Subnet:
+        - "*"
+      EC2InternetGateway:
+        - "*"
+      EC2RouteTable:
+        - "*"
+      EC2NetworkAcl:
+        - "*"
+      EC2SecurityGroup:
+        - "*"             # 필요 시 조건 걸 수도 있음 (예: 기본 SG만)
+      EC2NatGateway:
+        - "*"
+      EC2VpcPeeringConnection:
+        - "*"
+      EC2EgressOnlyInternetGateway:
+        - "*"
+      EC2VpnConnection:
+        - "*"
+      EC2VpnGateway:
+        - "*"
+      EC2CustomerGateway:
+        - "*"
